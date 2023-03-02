@@ -10,6 +10,7 @@ int negativeCount = tree.Negative(tree.Root);
 Console.WriteLine($"\nЗдаание 2\nКоличество позитивных узлов: {positiveCount}");
 Console.WriteLine($"Количество нешативных узлов: {negativeCount}");
 
-int count = tree.IdenticalNodes(tree.Root);
-Console.WriteLine("Nodes count with value " + value + ": " + count);
+Console.Write("\nЗадание 3\nВведите число которое может повторятся:");
+int val = Convert.ToInt32(Console.Read());
+Console.WriteLine("Повторяющиеся узлы: " + val + ": " + tree.IdenticalNodes(tree.Root, val));
 

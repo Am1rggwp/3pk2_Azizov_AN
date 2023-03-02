@@ -112,18 +112,19 @@ namespace PZ_3
         // задание 3  сам метод готов но вывести как пока не дадумался если вы это читаете значит я не успел сделать 
         public int IdenticalNodes(Node root, int value)
         {
-            if (root == null)
-            {
-                return 0;
-            }
             int count = 0;
-            if (root.Info == value)
+            if (root != null)
             {
-                count++;
+                if (root.Info == value)
+                {
+                    count++;
+                }
+                count += IdenticalNodes(root.Left, value);
+                count += IdenticalNodes(root.Right, value);
+
             }
-            count += IdenticalNodes(root.Left, value);
-            count += IdenticalNodes(root.Right, value);
             return count;
+
 
         }
 
