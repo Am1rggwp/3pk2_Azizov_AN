@@ -31,16 +31,19 @@ namespace PZ_6
             await task;
 
         }
-        public async Task PB(int a, ProgressBar p)
+        public async Task PB(int a, ProgressBar progressBar)
         {
-            int b = 1;
+            int с = 1;
             for (int i = 0; i < a; i++)
             {
-                b *= a;
-                p.Value += a / 100;
+                с *= a;
+                progressBar.Value += a / 100;
                 await Task.Delay(TimeSpan.FromSeconds(0.5));
 
             }
-        }
+        }//В синхроном режиме, прогресс бар заполняется мнгновенно, рисовать во время запонения нельзя.
+         //А в асинхронном режиме, прогресс бар заполняется постепенно, рисовать во время заполнения можно.
+        
+
     }
 }
