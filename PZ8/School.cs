@@ -12,7 +12,6 @@ namespace PZ8
 
         public override string GetContactInfo()
         {
-            
             return $"{Name}\n{Address}\n{PhoneNumber}";
         }
     }
