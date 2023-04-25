@@ -9,19 +9,19 @@
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
         <TextBlock Text="Библиотека" TextAlignment="Center" FontSize="25" FontWeight="Bold"/>
-        <TextBlock Text="Название книги:" TextAlignment="Center" FontSize="20"/>
+        <TextBlock Text="Название книги:"  FontSize="20"/>
         <TextBox x:Name="name" MinWidth="500" FontSize="20" Height="36"/>
 
-        <TextBlock Text="Автор:" TextAlignment="Center" FontSize="20"/>
+        <TextBlock Text="Автор:"  FontSize="20"/>
         <TextBox x:Name="autor" MinWidth="500" FontSize="20"/>
         
-        <TextBlock Text="Год публикации:" TextAlignment="Center" FontSize="20"/>
+        <TextBlock Text="Год публикации:"  FontSize="20"/>
         <TextBox x:Name="year" MinWidth="500" FontSize="20"/>
 
         
 
         <Button Content="Добавить книгу" MinWidth="500" FontSize="25" Background="Green" FontWeight="Bold" Command="{Binding AddBoCom}" CommandParameter="{Binding ElementName=Main}"/>
-        <TextBlock Text="Available books" TextAlignment="Center" FontSize="20"/>
+        <TextBlock Text="Добавленные книги" FontSize="20"/>
         <ListView x:Name="lst1" MinHeight="100"/>
     </StackPanel>
 </Window>
