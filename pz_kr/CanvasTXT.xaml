@@ -1,0 +1,17 @@
+﻿<Window x:Class="pz_kr.CanvasTXT"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pz_kr"
+        mc:Ignorable="d"
+        x:Name="WinTxt"
+        Title="CanvasTXT" Height="450" Width="800">
+    <StackPanel Orientation="Vertical">
+        <TextBox Text="Название заметки" x:Name="tb1" FontSize="23" TextAlignment="Center"/>
+        <TextBox x:Name="tb2" Height="340"/>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="✔" Background="Green" Foreground="White" Width="35" Height="35" Command="{Binding AddTxtCommand}" CommandParameter="{Binding ElementName=WinTxt}"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
